@@ -13,6 +13,7 @@
 		12278AF7277C425A00037949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12278AF5277C425A00037949 /* Main.storyboard */; };
 		12278AF9277C425B00037949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12278AF8277C425B00037949 /* Assets.xcassets */; };
 		12278AFC277C425B00037949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12278AFA277C425B00037949 /* LaunchScreen.storyboard */; };
+		12278B06277C4CF500037949 /* LoactionManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12278B05277C4CF500037949 /* LoactionManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		12278AF8277C425B00037949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12278AFB277C425B00037949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12278AFD277C425B00037949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12278B05277C4CF500037949 /* LoactionManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoactionManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		12278AEE277C425A00037949 /* GPSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				124C57D4277C54C000FDA33E /* ViewController */,
+				12278B04277C461700037949 /* Model */,
 				12278AEF277C425A00037949 /* AppDelegate.swift */,
 				12278AF1277C425A00037949 /* SceneDelegate.swift */,
-				12278AF3277C425A00037949 /* ViewController.swift */,
-				12278AF5277C425A00037949 /* Main.storyboard */,
 				12278AF8277C425B00037949 /* Assets.xcassets */,
 				12278AFA277C425B00037949 /* LaunchScreen.storyboard */,
 				12278AFD277C425B00037949 /* Info.plist */,
 			);
 			path = GPSDemo;
+			sourceTree = "<group>";
+		};
+		12278B03277C453E00037949 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12278AF3277C425A00037949 /* ViewController.swift */,
+				12278AF5277C425A00037949 /* Main.storyboard */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		12278B04277C461700037949 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				12278B05277C4CF500037949 /* LoactionManger.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		124C57D4277C54C000FDA33E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12278B03277C453E00037949 /* MainViewController */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +167,7 @@
 			files = (
 				12278AF4277C425A00037949 /* ViewController.swift in Sources */,
 				12278AF0277C425A00037949 /* AppDelegate.swift in Sources */,
+				12278B06277C4CF500037949 /* LoactionManger.swift in Sources */,
 				12278AF2277C425A00037949 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,11 +320,14 @@
 				DEVELOPMENT_TEAM = KWKVL4YQWY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPSDemo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用定位來過濾周遭活動";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用定位來過濾周遭活動";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,11 +351,14 @@
 				DEVELOPMENT_TEAM = KWKVL4YQWY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPSDemo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "使用定位來過濾周遭活動";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "使用定位來過濾周遭活動";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
